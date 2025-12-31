@@ -37,39 +37,25 @@
 
 ## 🚀 Quick Start
 
-### Using Docker (Recommended)
+### Get Started in 5 Minutes
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/yksanjo/vive-coders-security.git
+cd vive-coders-security
+
+# 2. Start everything with Docker
 docker-compose up
+
+# 3. Open dashboard
+# http://localhost:3000
 ```
+
+**That's it!** See [GET_STARTED.md](GET_STARTED.md) for the quickest path, or [VIVE_CODERS_GUIDE.md](VIVE_CODERS_GUIDE.md) for the complete step-by-step guide.
 
 ### Manual Setup
 
-1. **Backend**
-```bash
-cd backend
-npm install
-cp .env.example .env
-# Edit .env with your database URL and API keys
-npm run migrate
-npm run dev
-```
-
-2. **Dashboard**
-```bash
-cd dashboard
-npm install
-npm run dev
-```
-
-3. **Database**
-```bash
-createdb vivecoders_security
-cd backend
-npm run migrate
-```
-
-See [QUICKSTART.md](QUICKSTART.md) for detailed setup instructions.
+See [QUICKSTART.md](QUICKSTART.md) for detailed manual setup instructions.
 
 ## 📸 UI Preview
 
@@ -102,11 +88,17 @@ See [UI_DESCRIPTION.md](UI_DESCRIPTION.md) for detailed UI descriptions.
 
 ## 📚 Documentation
 
+### Getting Started
+- **[Get Started in 5 Minutes](GET_STARTED.md)** ⚡ - Fastest way to get running
+- **[Complete Step-by-Step Guide](VIVE_CODERS_GUIDE.md)** 📖 - Full guide for Vive Coders
+- [Quick Start Guide](QUICKSTART.md) - Detailed setup instructions
+
+### Reference
 - [API Documentation](docs/API.md)
 - [Integration Guide](docs/INTEGRATION.md)
 - [Deployment Guide](docs/DEPLOYMENT.md)
-- [Quick Start Guide](QUICKSTART.md)
 - [UI/UX Description](UI_DESCRIPTION.md)
+- [Screenshot Guide](SCREENSHOT_GUIDE.md)
 
 ## 🎯 Target Users
 
