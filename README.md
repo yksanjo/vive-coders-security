@@ -1,8 +1,14 @@
-# Vive Coders Security
+# 🔒 Vive Coders Security
 
-AI-powered security plugin for developers deploying on serverless platforms (Vercel, Railway, Replit). Real-time code scanning, AI-powered fix suggestions, and zero-friction CI/CD integration.
+**AI-powered security scanning for serverless deployments - catch vulnerabilities before they ship, with instant fix suggestions.**
 
-## Features
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## 🎯 One-Line Pitch
+
+**"Snyk for serverless developers: AI-powered security scanning that catches vulnerabilities in your Vercel/Railway/Replit deployments before they ship, with instant fix suggestions."**
+
+## ✨ Features
 
 - 🔍 **Real-time Code Scanning**: Detect security issues as you code
 - 🤖 **AI-Powered Fixes**: Generate secure code replacements automatically
@@ -11,51 +17,129 @@ AI-powered security plugin for developers deploying on serverless platforms (Ver
 - 📊 **Dashboard**: Centralized view of all security findings
 - ⚡ **Zero-Friction Setup**: One-click integration with platforms
 
-## Quick Start
+## 🏗️ Architecture
 
-### Backend
+```
+┌─────────────────┐     ┌──────────────┐     ┌─────────────┐
+│  VS Code /      │────▶│   Backend    │────▶│  PostgreSQL │
+│  Chrome /       │     │   API        │     │  Database   │
+│  Replit         │     │              │     └─────────────┘
+└─────────────────┘     └──────┬───────┘
+                                │
+                    ┌───────────┼───────────┐
+                    │           │           │
+              ┌─────▼───┐  ┌───▼────┐  ┌──▼──────┐
+              │ Scanner │  │   AI   │  │ GitHub │
+              │ Engine  │  │Service │  │ Vercel │
+              └─────────┘  └────────┘  │Railway │
+                                       └────────┘
+```
 
+## 🚀 Quick Start
+
+### Using Docker (Recommended)
+
+```bash
+docker-compose up
+```
+
+### Manual Setup
+
+1. **Backend**
 ```bash
 cd backend
 npm install
 cp .env.example .env
-# Edit .env with your database and API keys
+# Edit .env with your database URL and API keys
+npm run migrate
 npm run dev
 ```
 
-### Dashboard
-
+2. **Dashboard**
 ```bash
 cd dashboard
 npm install
 npm run dev
 ```
 
-### VS Code Extension
-
+3. **Database**
 ```bash
-cd extensions/vscode-extension
-npm install
-npm run compile
-# Press F5 to launch extension development host
+createdb vivecoders_security
+cd backend
+npm run migrate
 ```
 
-## Architecture
+See [QUICKSTART.md](QUICKSTART.md) for detailed setup instructions.
+
+## 📸 UI Preview
+
+### Dashboard Overview
+- **Modern gradient background** (blue to indigo)
+- **Four stat cards**: Projects, Total Findings, Critical Issues, Recent Scans
+- **Project list** with platform badges and quick access
+- **Color-coded severity**: Red (critical) → Orange (high) → Yellow (medium) → Blue (low)
+
+### Project Detail Page
+- **Filterable findings list** by severity and status
+- **AI-powered fix suggestions** in green highlight boxes
+- **File path and line number** for each finding
+- **One-click status updates** (fixed, ignored, false positive)
+
+### VS Code Extension
+- **Inline diagnostics** with severity indicators
+- **Real-time scanning** on file save
+- **Quick-fix suggestions** in the Problems panel
+
+See [UI_DESCRIPTION.md](UI_DESCRIPTION.md) for detailed UI descriptions.
+
+## 🛠️ Technology Stack
 
 - **Backend**: Node.js, Express, TypeScript, PostgreSQL
 - **Frontend**: Next.js 14, React, Tailwind CSS
-- **Extensions**: VS Code API, Chrome Extension API, Replit API
-- **AI**: OpenAI/Anthropic for security suggestions
-- **CI/CD**: GitHub Actions, Vercel, Railway integrations
+- **Extensions**: VS Code API, Chrome Extension API
+- **AI**: OpenAI API for security suggestions
+- **CI/CD**: GitHub Actions, Vercel Functions, Railway Webhooks
 
-## Documentation
+## 📚 Documentation
 
-See [docs/](docs/) for detailed documentation:
 - [API Documentation](docs/API.md)
 - [Integration Guide](docs/INTEGRATION.md)
 - [Deployment Guide](docs/DEPLOYMENT.md)
+- [Quick Start Guide](QUICKSTART.md)
+- [UI/UX Description](UI_DESCRIPTION.md)
 
-## License
+## 🎯 Target Users
 
-MIT
+- **Indie developers** deploying on Vercel/Railway/Replit
+- **Startups** needing security without enterprise complexity
+- **Teams** wanting AI-powered security suggestions
+- **Developers** who deploy fast and need security confidence
 
+## 🔐 Security Features Detected
+
+- Exposed environment variables
+- Hardcoded secrets (API keys, tokens, passwords)
+- SQL injection patterns
+- XSS vulnerabilities
+- Missing authentication
+- Weak cryptography
+- Misconfigured CORS
+- Vulnerable dependencies
+
+## 🤝 Contributing
+
+Contributions welcome! Please read our contributing guidelines.
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+## 🚧 Status
+
+MVP Complete - Ready for testing and deployment.
+
+See [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md) for detailed status.
+
+---
+
+**Built for developers who deploy fast and need security confidence.**
