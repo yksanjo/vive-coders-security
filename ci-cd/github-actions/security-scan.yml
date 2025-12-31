@@ -1,0 +1,63 @@
+name: Security Scan
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          files: |
+            **/*.js
+            **/*.ts
+            **/*.jsx
+            **/*.tsx
+            **/*.py
+            **/*.json
+
+      - name: Scan for security issues
+        run: |
+          # Install dependencies if needed
+          if [ -f package.json ]; then
+            npm install
+          fi
+
+          # Run security scan
+          curl -X POST ${{ secrets.VIVE_CODERS_SECURITY_API_URL }}/api/scan \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.VIVE_CODERS_SECURITY_API_KEY }}" \
+            -d '{
+              "project_id": "${{ github.repository }}",
+              "scan_type": "code",
+              "files": [
+                {
+                  "path": "${{ steps.changed-files.outputs.all_changed_files }}",
+                  "content": "$(cat ${{ steps.changed-files.outputs.all_changed_files }})"
+                }
+              ]
+            }'
+
+      - name: Comment PR with findings
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '⚠️ Security scan found issues. Please review the findings.'
+            });
+

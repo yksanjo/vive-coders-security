@@ -1,0 +1,13 @@
+{
+  "name": "vive-coders-security-replit",
+  "version": "1.0.0",
+  "description": "Vive Coders Security extension for Replit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["security", "replit", "scanner"],
+  "author": "",
+  "license": "MIT"
+}
+
