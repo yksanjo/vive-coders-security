@@ -1,0 +1,13 @@
+🚀 Just shipped: Snyk for serverless developers
+
+AI-powered security scanning that catches vulnerabilities in your Vercel/Railway/Replit deployments BEFORE they ship.
+
+✨ Instant AI fix suggestions
+🔍 Real-time VS Code scanning
+🚀 Zero-friction CI/CD integration
+
+Open source & ready to use 👇
+https://github.com/yksanjo/vive-coders-security
+
+#DevSecOps #Serverless #AI #OpenSource
+
