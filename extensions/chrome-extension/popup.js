@@ -7,3 +7,13 @@ document.getElementById('scanBtn').addEventListener('click', () => {
   });
 });
 
+
+
+
+
+
+
+
+
+
+

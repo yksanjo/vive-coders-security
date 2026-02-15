@@ -71,3 +71,13 @@ Grid of integration cards (2x2 layout).
 - **Responsive**: Works on mobile, tablet, desktop
 - **Accessible**: High contrast, readable fonts, clear hierarchy
 
+
+
+
+
+
+
+
+
+
+

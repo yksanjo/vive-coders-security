@@ -13,3 +13,13 @@ Security scanning for Replit projects.
 
 The extension will automatically scan your code as you type and display security warnings in the sidebar.
 
+
+
+
+
+
+
+
+
+
+

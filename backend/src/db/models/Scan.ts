@@ -51,3 +51,13 @@ export const getScanById = async (id: string): Promise<Scan | null> => {
   return result.rows[0] || null;
 };
 
+
+
+
+
+
+
+
+
+
+

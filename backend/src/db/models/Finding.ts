@@ -92,3 +92,13 @@ export const updateFinding = async (id: string, updates: Partial<Finding>): Prom
   return result.rows[0];
 };
 
+
+
+
+
+
+
+
+
+
+

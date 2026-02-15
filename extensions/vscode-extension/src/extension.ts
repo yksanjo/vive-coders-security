@@ -98,3 +98,13 @@ function getSeverity(severity: string): vscode.DiagnosticSeverity {
 
 export function deactivate() {}
 
+
+
+
+
+
+
+
+
+
+

@@ -16,3 +16,13 @@
 4. **CI/CD integrated** - Automatic scanning on PRs and deployments
 5. **Developer-first** - Built for indie devs and startups, not enterprise
 
+
+
+
+
+
+
+
+
+
+

@@ -53,3 +53,13 @@ export const deleteProject = async (id: string): Promise<void> => {
   await query('DELETE FROM projects WHERE id = $1', [id]);
 };
 
+
+
+
+
+
+
+
+
+
+

@@ -35,3 +35,13 @@ Add to your `settings.json`:
 
 Auto-scan runs on file save by default.
 
+
+
+
+
+
+
+
+
+
+

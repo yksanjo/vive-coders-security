@@ -43,3 +43,13 @@ export const updateUser = async (id: string, updates: Partial<User>): Promise<Us
   return result.rows[0];
 };
 
+
+
+
+
+
+
+
+
+
+

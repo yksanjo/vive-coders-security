@@ -142,3 +142,13 @@ export const codeScanner = {
   },
 };
 
+
+
+
+
+
+
+
+
+
+

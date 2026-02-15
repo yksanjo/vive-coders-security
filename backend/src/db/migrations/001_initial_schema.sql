@@ -82,3 +82,13 @@ CREATE INDEX IF NOT EXISTS idx_findings_severity ON findings(severity);
 CREATE INDEX IF NOT EXISTS idx_findings_status ON findings(status);
 CREATE INDEX IF NOT EXISTS idx_integrations_user_id ON integrations(user_id);
 
+
+
+
+
+
+
+
+
+
+

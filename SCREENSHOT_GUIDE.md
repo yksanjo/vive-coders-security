@@ -114,3 +114,13 @@ If you can't run the app yet, you can:
 - List of colored cards (red, orange, yellow, blue)
 - Each card: Title, description, file path, fix suggestion box
 
+
+
+
+
+
+
+
+
+
+

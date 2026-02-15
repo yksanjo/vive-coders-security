@@ -37,3 +37,13 @@ router.delete('/:platform', async (req: Request, res: Response) => {
 
 export default router;
 
+
+
+
+
+
+
+
+
+
+

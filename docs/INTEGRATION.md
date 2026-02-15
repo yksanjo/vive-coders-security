@@ -34,3 +34,13 @@
 2. Navigate to GitHub PRs
 3. Extension will automatically scan
 
+
+
+
+
+
+
+
+
+
+
